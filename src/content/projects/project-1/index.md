@@ -25,20 +25,20 @@ It is primarily Astro, Tailwind and Typescript, with a very small amount of Soli
 
 ## 📋 Features
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
+* ✅ 100/100 Lighthouse performance
+* ✅ Responsive
+* ✅ Accessible
+* ✅ SEO friendly
+* ✅ Typesafe
+* ✅ Minimal style
+* ✅ Light/Dark Theme
+* ✅ Animated UI
+* ✅ Tailwind styling
+* ✅ Auto generated sitemap
+* ✅ Auto generated RSS Feed
+* ✅ Markdown support
+* ✅ MDX Support (components in your markdown)
+* ✅ Searchable content (posts and projects)
 
 ## 💯 Lighthouse score
 

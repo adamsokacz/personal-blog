@@ -27,19 +27,19 @@ It was designed as an even more minimal theme than Mark Horn's popular theme [As
 
 ## 📋 Features
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
+* ✅ 100/100 Lighthouse performance
+* ✅ Responsive
+* ✅ Accessible
+* ✅ SEO friendly
+* ✅ Typesafe
+* ✅ Minimal style
+* ✅ Light/Dark Theme
+* ✅ Animated UI
+* ✅ Tailwind styling
+* ✅ Auto generated sitemap
+* ✅ Auto generated RSS Feed
+* ✅ Markdown support
+* ✅ MDX Support (components in your markdown)
 
 ## 💯 Lighthouse score
 

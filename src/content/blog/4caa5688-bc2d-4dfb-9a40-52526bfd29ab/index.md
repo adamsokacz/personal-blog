@@ -4,11 +4,11 @@ description: "How digital commissioning and maintenance analytics can reduce the
 date: "2025-03-08"
 tags:
   - manufacturing
-  - digital-commissioning
+  - digital_commissioning
   - finance
 ---
 
-This report identifies how digital commissioning and maintenance analytics solutions can reduce the cost of capital for funding nation building manufacturing projects, reducing the risk burden on internal company stakeholders, external financiers, and public financing institutions. It then explores how the adoption of these digital solutions can be a dramatic competitive advantage when bidding on high-complexity high-cost custom automation projects.
+This report identifies how digital commissioning and maintenance analytics solutions can reduce the cost of capital for funding nation building manufacturing projects, reducing the risk burden on internal company stakeholders, external financiers, and public financing institutions. It then explores how the adoption of these digital solutions can be a dramatic competitive advantage when bidding on highly complex, high cost custom automation projects.
 
 **Scenario:** Tom Smith operates a packaged goods manufacturing firm that provides the province with 10,000 jobs. Direct competition with international companies is pressuring Tom to improve efficiency and expand operations to meet growing demand. Tom requires a custom packaging line but does not have the internal capital to fund this expansion. In the past, he has had help from federal and provincial loans to 'foot the bill'. Financial institutions don't want to touch the project because too much can go wrong in the project, they don't understand all the complex engineering jargon, and there are lower risk projects with a better return on investment available.
 
