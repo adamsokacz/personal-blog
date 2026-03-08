@@ -12,11 +12,11 @@ tags:
 
 When planning large scale engineering projects, project managers rely on a few sources of information:
 
-Engineering drawings show limited but detailed information about a specific system. They require specialized technical expertise to read and also rely on legacy nonextensible software like Solidworks which are prone to crashing and cannot show a holistic perspective of the project.
+<b>Engineering Drawings</b> show limited but detailed information about a specific system. They require specialized technical expertise to read and also rely on legacy nonextensible software like Solidworks which are prone to crashing and cannot show a holistic perspective of the project.
 
-Excel Sheets that are passed from stakeholder to stakeholder, do not have a formal revision system, and describe in the language that the specific stakeholder understands but not necessarily other stakeholders.
+<b>Excel Sheets</b> that are passed from stakeholder to stakeholder, do not have a formal revision system, and describe in the language that the specific stakeholder understands but not necessarily other stakeholders.
 
-Project Experience, where individuals who have either worked on the project since the beginning or worked on similar projects in the past, and are able to competently "fill in the gaps" and assess risks.
+<b>Project Experience</b>, where individuals who have either worked on the project since the beginning or worked on similar projects in the past, and are able to competently "fill in the gaps" and assess risks.
 
 OpenUSD is an extensible file format that can encapsulate both 3D models and project specific data in an engineering hierarchy. Traditional CAD software structures engineering models in a part and assembly hierarchy, where subassemblies can be inherited into larger assemblies. The limitation of this system is custom project management information cannot be encoded into parts and assemblies, and that once an assembly becomes too large, it may take a PC hours to open it, if it does not crash.
 
