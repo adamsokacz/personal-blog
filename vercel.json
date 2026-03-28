@@ -11,12 +11,6 @@
       "has": [{ "type": "host", "value": "www.adamsokacz.com" }],
       "destination": "https://adamsokacz.ca/:path*",
       "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.adamsokacz.ca" }],
-      "destination": "https://adamsokacz.ca/:path*",
-      "permanent": true
     }
   ]
 }

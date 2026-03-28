@@ -48,10 +48,7 @@ const prevPost = getPrevPost();
 const post = Astro.props;
 const { Content, headings } = await render(post);
 
-const pdfUrl =
-  post.data.pdf != null
-    ? new URL(post.data.pdf, Astro.site ?? Astro.url).href
-    : null;
+const pdfPath = post.data.pdf ?? null;
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
@@ -93,13 +90,27 @@ const pdfUrl =
     <article class="animate">
       <Content />
       {
-        pdfUrl && (
+        pdfPath && (
           <div class="not-prose mt-8 w-full">
-            <iframe
-              src={pdfUrl}
-              title={post.data.title}
+            <object
+              data={pdfPath + "#toolbar=1"}
+              type="application/pdf"
               class="block min-h-[85vh] w-full rounded-lg border border-black/15 dark:border-white/20"
-            />
+              aria-label={post.data.title}
+            >
+              <p class="text-sm">
+                This browser cannot show the PDF inline.{" "}
+                <a
+                  href={pdfPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline"
+                >
+                  Open or download the PDF
+                </a>
+                .
+              </p>
+            </object>
           </div>
         )
       }
