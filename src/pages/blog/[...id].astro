@@ -91,11 +91,13 @@ const pdfPath = post.data.pdf ?? null;
       <Content />
       {
         pdfPath && (
-          <div class="not-prose mt-8 w-full">
+          <div
+            class="not-prose relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-10 w-screen max-w-[100vw] px-3 sm:px-6"
+          >
             <object
               data={pdfPath + "#toolbar=1"}
               type="application/pdf"
-              class="block min-h-[85vh] w-full rounded-lg border border-black/15 dark:border-white/20"
+              class="block h-[95vh] min-h-[90vh] w-full max-h-[1600px] rounded-lg border border-black/15 dark:border-white/20 sm:min-h-[95vh]"
               aria-label={post.data.title}
             >
               <p class="text-sm">
