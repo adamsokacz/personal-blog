@@ -2,20 +2,20 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "adamsokacz.ca" }],
-      "destination": "https://adamsokacz.com/:path*",
+      "has": [{ "type": "host", "value": "adamsokacz.com" }],
+      "destination": "https://adamsokacz.ca/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.adamsokacz.com" }],
-      "destination": "https://adamsokacz.com/:path*",
+      "destination": "https://adamsokacz.ca/:path*",
       "permanent": true
     },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.adamsokacz.ca" }],
-      "destination": "https://adamsokacz.com/:path*",
+      "destination": "https://adamsokacz.ca/:path*",
       "permanent": true
     }
   ]
