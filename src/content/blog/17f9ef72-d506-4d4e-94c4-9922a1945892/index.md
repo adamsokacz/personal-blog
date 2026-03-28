@@ -1,6 +1,6 @@
 ---
-title: "Nemoclaw whitepaper"
-description: "Technical whitepaper on Nemoclaw, available as a PDF."
+title: "A Deep Dive into NemoClaw"
+description: "Technical Whitepaper on NemoClaw, available as a PDF."
 date: "2026-03-28"
 tags:
   - nemoclaw
