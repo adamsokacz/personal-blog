@@ -6,7 +6,7 @@ tags:
   - manufacturing
   - digital_commissioning
   - finance
-featured: true
+featured: false
 ---
 
 This report will investigate how Virtual Commissioning adds value to the management and financing of high-complexity engineering projects.

@@ -1,5 +1,5 @@
 ---
-title: "NVIDIA Omniverse — Developer Notes"
+title: "Omniverse Extension Dev Notes"
 excerpt: "A practical guide to the NVIDIA simulation ecosystem, the Omniverse extension model, and the most common scripting, UI, and development patterns."
 publishDate: "2026-06-03"
 tags:
@@ -20,7 +20,6 @@ featured: true
 | **Cosmos** | An AI platform that lets AI engineers build custom platforms. A key use case is generating **synthetic, photo-realistic visual scenarios** for Metropolis to test against. |
 | **NIM** | NVIDIA's **containerized AI model** platform. |
 
----
 
 ## What is Omniverse
 
@@ -35,7 +34,6 @@ All tools within Omniverse are known as **Extensions**. Users can modify, share,
 
 Extensions interact with items in the Omniverse scene using **Scripting APIs**, which provide a set of commands for performing actions in the scene, according to OpenUSD specifications.
 
----
 
 ## Scripting APIs
 
@@ -81,7 +79,6 @@ for i, p in enumerate(points):
     print(f"({p[0]}, {p[1]}, {p[2]})")
 ```
 
----
 
 ## Omniverse Extension Structure
 
@@ -152,7 +149,6 @@ class CompanyToolExtension(omni.ext.IExt):
         print(f"[{self._ext_id}] shutdown")
 ```
 
----
 
 ## Extension Design Patterns
 
@@ -171,7 +167,6 @@ class CompanyToolExtension(omni.ext.IExt):
 - Your extension may expose APIs intended to be accessed by other Omniverse extensions.
 - It becomes critical to abstract out back-end logic and provide these APIs as a **simple, robust interface, with unit tests**.
 
----
 
 ## User Interface
 
@@ -234,7 +229,6 @@ combo.model.add_item_changed_fn(
 )
 ```
 
----
 
 ## Development
 
