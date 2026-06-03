@@ -14,7 +14,17 @@ description: "Personal career goals, market context, and strategic paths."
 
 - Technical specialist in industrial automation robotics software
 - Some AI experience
-- Began my MBA because I struggled with leadership (soft) skills and financial skills in previous roles
+- Began my MBA because I struggled with leadership (soft) skills in previous roles and financial skills
+
+## How I Work
+
+- Prefer specific emails over verbal communication
+- Value absolute honesty during 1 on 1's
+- Value being diplomatic in public
+- Need social interaction to break up periods of focused work
+- Prefer async work with periodic meetings, I dislike context switching on technical tasks
+- I naturally focus rather than seeing the bigger picture
+- Work best in the mornings
 
 ## What I Value
 
