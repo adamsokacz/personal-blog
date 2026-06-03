@@ -1,13 +1,12 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-import pagefind from "astro-pagefind";
+import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://adamsokacz.ca",
-  integrations: [sitemap(), mdx(), pagefind()],
+  integrations: [react(), sitemap(), mdx()],
   vite: {
     plugins: [tailwindcss()],
   },

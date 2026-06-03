@@ -2,6 +2,8 @@
 dist/
 # generated types
 .astro/
+# synced post assets (regenerated from posts/ at build time)
+public/posts/
 
 # dependencies
 node_modules/

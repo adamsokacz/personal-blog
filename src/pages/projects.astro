@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/react/Header";
+import Footer from "../components/react/Footer";
+import ProjectTopicSection from "../components/react/ProjectTopicSection";
+import SectionHeading from "../components/react/SectionHeading";
+import siteConfig from "../data/site-config";
+import { projects } from "../data/projects";
+import type { ProjectTopic } from "../types";
+
+const topicGroups = new Map<ProjectTopic, typeof projects>();
+for (const project of projects) {
+  const group = topicGroups.get(project.topic) || [];
+  group.push(project);
+  topicGroups.set(project.topic, group);
+}
+
+for (const [topic, group] of topicGroups) {
+  topicGroups.set(
+    topic,
+    [...group].sort((a, b) => a.listPositionOverride - b.listPositionOverride)
+  );
+}
+
+const sortedTopics = [...topicGroups.entries()].sort((a, b) => {
+  if (a[0] === "Finance") return 1;
+  if (b[0] === "Finance") return -1;
+  return b[1].length - a[1].length;
+});
+---
+
+<BaseLayout title="Projects" description="A collection of my projects">
+  <Header
+    slot="header"
+    client:load
+    title={siteConfig.title}
+    navLinks={siteConfig.primaryNavLinks}
+    currentPath={Astro.url.pathname}
+    className="bg-slate-50 border-b border-slate-100"
+  />
+  <main class="grow px-4 py-12 sm:px-8 sm:py-16">
+    <div class="mx-auto max-w-3xl">
+      <SectionHeading className="mb-8 sm:mb-12">Projects</SectionHeading>
+      {sortedTopics.map(([topic, topicProjects]) => (
+        <ProjectTopicSection
+          client:load
+          topic={topic}
+          projects={topicProjects}
+        />
+      ))}
+    </div>
+  </main>
+  <Footer
+    slot="footer"
+    title={siteConfig.title}
+    secondaryNavLinks={siteConfig.secondaryNavLinks}
+    socialLinks={siteConfig.socialLinks}
+  />
+</BaseLayout>

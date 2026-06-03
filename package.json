@@ -1,34 +1,40 @@
 {
-  "name": "astro-micro",
+  "name": "personal-blog",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
+    "predev": "node scripts/sync-post-assets.mjs",
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/sync-post-assets.mjs",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name=personal-site",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.3.5",
+    "@astrojs/react": "^5.0.7",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.6.0",
-    "@fontsource/geist-mono": "^5.2.7",
-    "@fontsource/geist-sans": "^5.2.5",
+    "@fontsource-variable/figtree": "^5.2.10",
     "@tailwindcss/vite": "^4.1.13",
+    "@types/react": "^19.2.16",
+    "@types/react-dom": "^19.2.3",
     "astro": "^5.13.9",
-    "astro-pagefind": "^1.8.5",
     "clsx": "^2.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.18",
-    "pagefind": "^1.4.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.14"
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "wrangler": "^4.97.0"
   }
 }

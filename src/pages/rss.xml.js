@@ -1,27 +1,25 @@
 import rss from "@astrojs/rss";
-import { SITE } from "@consts";
 import { getCollection } from "astro:content";
+import siteConfig from "../data/site-config";
 
 export async function GET(context) {
-  const blog = (await getCollection("blog")).filter((post) => !post.data.draft);
+  const posts = (await getCollection("blog")).filter((post) => !post.data.draft);
 
-  const projects = (await getCollection("projects")).filter(
-    (project) => !project.data.draft,
-  );
-
-  const items = [...blog, ...projects].sort(
-    (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+  const items = posts.sort(
+    (a, b) =>
+      new Date(b.data.publishDate).valueOf() -
+      new Date(a.data.publishDate).valueOf()
   );
 
   return rss({
-    title: SITE.TITLE,
-    description: SITE.DESCRIPTION,
+    title: siteConfig.title,
+    description: siteConfig.description,
     site: context.site,
     items: items.map((item) => ({
       title: item.data.title,
-      description: item.data.description,
-      pubDate: item.data.date,
-      link: `/${item.collection}/${item.id}/`,
+      description: item.data.excerpt || "",
+      pubDate: item.data.publishDate,
+      link: `/blog/${item.id}/`,
     })),
   });
 }

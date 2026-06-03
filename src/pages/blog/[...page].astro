@@ -1,0 +1,59 @@
+---
+import type { GetStaticPathsOptions, Page } from "astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/react/Header";
+import Footer from "../../components/react/Footer";
+import PostPreview from "../../components/react/PostPreview";
+import Pagination from "../../components/react/Pagination";
+import siteConfig from "../../data/site-config";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = (await getCollection("blog"))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
+  return paginate(posts, { pageSize: siteConfig.postsPerPage || 5 });
+}
+
+const { page } = Astro.props as { page: Page<CollectionEntry<"blog">> };
+const posts = page.data;
+---
+
+<BaseLayout title="Blog" description="All blog posts">
+  <Header
+    slot="header"
+    client:load
+    title={siteConfig.title}
+    navLinks={siteConfig.primaryNavLinks}
+    currentPath={Astro.url.pathname}
+    className="bg-slate-50 border-b border-slate-100"
+  />
+  <main class="grow px-4 py-12 sm:px-8 sm:py-16">
+    <h1 class="sr-only">Blog</h1>
+    <div class="mx-auto max-w-3xl xl:max-w-6xl">
+      {posts.map((post) => (
+        <PostPreview
+          id={post.id}
+          title={post.data.title}
+          publishDate={post.data.publishDate}
+          updatedDate={post.data.updatedDate}
+          excerpt={post.data.excerpt}
+          featured={post.data.featured}
+          featureImage={post.data.featureImage}
+        />
+      ))}
+    </div>
+    <Pagination
+      currentPage={page.currentPage}
+      lastPage={page.lastPage}
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+    />
+  </main>
+  <Footer
+    slot="footer"
+    title={siteConfig.title}
+    secondaryNavLinks={siteConfig.secondaryNavLinks}
+    socialLinks={siteConfig.socialLinks}
+  />
+</BaseLayout>

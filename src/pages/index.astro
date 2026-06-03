@@ -1,65 +1,84 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import { SITE, HOME } from "@consts";
-import ArrowCard from "@components/ArrowCard.astro";
-import Link from "@components/Link.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/react/Header";
+import Hero from "../components/react/Hero";
+import Footer from "../components/react/Footer";
+import FeaturedPostPreview from "../components/react/FeaturedPostPreview";
+import PostPreview from "../components/react/PostPreview";
+import SectionHeading from "../components/react/SectionHeading";
+import siteConfig from "../data/site-config";
 import { getCollection } from "astro:content";
 
-const blog = (await getCollection("blog"))
+const posts = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+  .sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
 
+const featuredPosts = posts.filter((post) => post.data.featured);
+const latestPosts = posts.filter((post) => !post.data.featured).slice(0, 3);
 ---
 
-<Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
-  <Container>
-    <aside data-pagefind-ignore>
-      <h1 class="font-semibold text-black dark:text-white">
-        Adam Sokacz
-      </h1>
-      <div class="space-y-16">
-        <section>
-          <article class="space-y-4">
-            <p>
-              I explore topics in Industrial (Physical) AI, Industrial Automation, Software Development, and Finance. As a current MBA (Finance) student with a background in automation engineering and software systems, I am interested in topics where these domains intersect. The motivation for this blog is to organize and communicate my own professional thoughts on certain topics.
-            </p>
-            <p>
-              Connect with me on <Link href="https://www.linkedin.com/in/adamsokacz" external>LinkedIn</Link> or browse the articles below.
-            </p>
-          </article>
-        </section>
-
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="font-semibold text-black dark:text-white">
-              Latest posts
-            </h2>
-            <Link href="/blog"> See all posts </Link>
-          </div>
-          <ul class="not-prose flex flex-col gap-4">
-            {
-              blog.map((post) => (
-                <li>
-                  <ArrowCard entry={post} />
-                </li>
-              ))
-            }
-          </ul>
-        </section>
-
-        <section class="animate space-y-4">
-          <h2 class="font-semibold text-black dark:text-white">
-            Let's Connect
-          </h2>
-          <p>
-            <Link href="https://www.linkedin.com/in/adamsokacz" external aria-label="Adam Sokacz on LinkedIn">
-              LinkedIn
-            </Link>
-          </p>
-        </section>
+<BaseLayout description={siteConfig.description}>
+  <div class="relative border-b border-slate-100 bg-slate-50" slot="header">
+    <Header
+      client:load
+      title={siteConfig.title}
+      navLinks={siteConfig.primaryNavLinks}
+      currentPath={Astro.url.pathname}
+    />
+    <Hero {...siteConfig.hero} socialLinks={siteConfig.socialLinks} />
+  </div>
+  <main class="grow py-12 sm:py-16">
+    {featuredPosts.length > 0 && (
+      <div class="mb-12 border-b border-slate-200 px-4 sm:mb-16 sm:px-8">
+        <div class="mx-auto max-w-6xl">
+          {featuredPosts.map((post) => (
+            <FeaturedPostPreview
+              id={post.id}
+              title={post.data.title}
+              publishDate={post.data.publishDate}
+              updatedDate={post.data.updatedDate}
+              excerpt={post.data.excerpt}
+              featureImage={post.data.featureImage}
+            />
+          ))}
+        </div>
       </div>
-    </aside>
-  </Container>
-</Layout>
+    )}
+    <div class="mb-12 px-4 sm:mb-16 sm:px-8">
+      {latestPosts.length > 0 && (
+        <>
+          <div class="mx-auto mb-8 max-w-3xl sm:mb-12">
+            <SectionHeading>Latest Articles</SectionHeading>
+          </div>
+          <div class="mx-auto max-w-3xl xl:max-w-6xl">
+            {latestPosts.map((post) => (
+              <PostPreview
+                id={post.id}
+                title={post.data.title}
+                publishDate={post.data.publishDate}
+                updatedDate={post.data.updatedDate}
+                excerpt={post.data.excerpt}
+                featured={post.data.featured}
+                featureImage={post.data.featureImage}
+              />
+            ))}
+          </div>
+          <div class="mx-auto max-w-3xl border-t border-slate-200 pt-8 sm:pt-12">
+            <a
+              class="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-8 py-2.5 font-semibold text-white transition duration-300 hover:shadow-button"
+              href="/blog"
+            >
+              View All Posts
+            </a>
+          </div>
+        </>
+      )}
+    </div>
+  </main>
+  <Footer
+    slot="footer"
+    title={siteConfig.title}
+    secondaryNavLinks={siteConfig.secondaryNavLinks}
+    socialLinks={siteConfig.socialLinks}
+  />
+</BaseLayout>
