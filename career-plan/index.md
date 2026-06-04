@@ -5,32 +5,25 @@ description: "Personal career goals, market context, and strategic paths."
 
 ## What I See
 
-- The Canadian economy values managerial positions over technical positions.
-- The Canadian economy values a specific group of industries over others (economic specialization).
-- These high-value industries are **Finance**, **Life Sciences**, **Nuclear**, **Mining**, and **Healthcare**.
-- Neighbouring economies value industries and roles differently.
+- The Canadian economy values managerial positions over technical positions
+- The Canadian economy values specific industries more than others (economic specialization)
+- These high-value industries are **Finance**, **Life Sciences**, **Nuclear**, **Mining**, and **Healthcare**
+- Multinational corporations enable a higher degree of specialization, access to opportunities, and career growth than local companies
+
 
 ## Where I Am
 
 - Technical specialist in industrial automation robotics software
-- Some AI experience
-- Began my MBA because I struggled with leadership (soft) skills in previous roles and financial skills
+- Interest and some experience in Industrial (Physical) AI in the NVIDIA Omniverse ecosystem
+- Began my MBA because I struggled with leadership (soft) skills in previous roles
+- Because of my MBA, I have a foundational understanding of how organizations function, make decisions, and manage risk
 
-## How I Work
-
-- Prefer specific emails over verbal communication
-- Value absolute honesty during 1 on 1's
-- Value being diplomatic in public
-- Need social interaction to break up periods of focused work
-- Prefer async work with periodic meetings, I dislike context switching on technical tasks
-- I naturally focus rather than seeing the bigger picture
-- Work best in the mornings
 
 ## What I Value
 
 1. Interesting technical work
-2. Great work culture
-3. Reasonable pay
+2. Friendly work culture
+
 
 ## Strategy 1
 
@@ -42,26 +35,14 @@ description: "Personal career goals, market context, and strategic paths."
 
 **Years 7–10**
 
-- **Option 1:** Begin the focused push into consultancy or management in the Canadian market
-- **Option 2:** Begin the focused push into consultancy or management for a US company that services a broader market
-- **Option 3:** The Canadian economy may reposition out of necessity due to external pressure.
+- **Option 1:** Begin a focused push into consultancy for that specific industry, for a multinational company that services a broader market (higher room for career growth)
+- **Option 2:** Begin a focused push into management within a high-value sector of the Canadian economy
+
 
 ## Strategy 2
-
-**Years 1–7**
-
-- Become a technical expert in a high-value field, currently **Physical AI for Industrial Automation**
-
-**Years 7+**
-
-- Begin the push into the finance industry, one of Canada's high-value industries, sepcifically in a private capital role for industrial technology innovation
-
-
-## Strategy 3
-- Operate a business that enables me to combine all of my skills in a unique way
+- Operate a business that enables me to combine many of my skills in a unique way
 
 
 ## Considerations
-- Payoff is on the back-end of my career
-- Technical careers push people towards specialization so I need to make a concerted effort to build a strong broader foundation to help me get where I need to go in the long-term
-- I need to build technical depth and avoid the temptation to jump to PM
+- Technical careers push people towards specialization so I need to make an effort to build a strong foundation and be open to new learning opportunities
+- I must avoid the temptation to jump to PM because it will stifle long-term career growth
