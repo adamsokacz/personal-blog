@@ -76,11 +76,11 @@ e) Strict filesystem access controls where the agent cannot itself modify its ow
 
 For organizations, Nemoclaw may enhance operations through the following opportunities:
 
-**Managing Risk** — Your employees are using AI anyways, and they are probably uploading all of your confidential information to it on a daily basis. By providing them with a controlled alternative, as an organization, you may be able to mitigate this data leakage.
+**Managing Risk** - Your employees are using AI anyways, and they are probably uploading all of your confidential information to it on a daily basis. By providing them with a controlled alternative, as an organization, you may be able to mitigate this data leakage.
 
-**Context-Driven Responses** — By providing a Nemoclaw agent access to internal process documentation, the responses that you receive will be more contextually specific to your industry and business.
+**Context-Driven Responses** - By providing a Nemoclaw agent access to internal process documentation, the responses that you receive will be more contextually specific to your industry and business.
 
-**Reduced Impact of Employee Turnover** — Currently, an employee's email account will be deactivated and documents erased. Anyways, these documents would have been organized in such a way where you would require a deep understanding of the role and project to follow along. By tying a personalized agent to that role, even if the human leaves the role, the "tribal knowledge" built over time from historical data and "battle-tested" context remains with the organization.
+**Reduced Impact of Employee Turnover** - Currently, an employee's email account will be deactivated and documents erased. Anyways, these documents would have been organized in such a way where you would require a deep understanding of the role and project to follow along. By tying a personalized agent to that role, even if the human leaves the role, the "tribal knowledge" built over time from historical data and "battle-tested" context remains with the organization.
 
 Overall, since Openclaw is an emerging project, we haven't seen this play out yet at an enterprise scale. This makes it difficult to quantify the impact of these opportunities to the organization. Instead, these strategic considerations should be a part of an organization's complete AI strategy and tied to specific key performance indicators of value for that specific industry, such as time-to-market, turnover rate, or project risk level.
 
@@ -169,7 +169,7 @@ The procedure below provides you with instructions to install a minimal Nemoclaw
    - Run: `nemoclaw sandbox list`
    - Run: `openshell policy get <sandbox-name> --full`
    - Run: `nemoclaw <sandbox-name> connect`
-   - Run: `exit` — you will return to host
+   - Run: `exit` - you will return to host
 
 3. **Inspect Setup**
    - Run: `openshell logs <sandbox-name> --tail --source sandbox`
@@ -274,7 +274,7 @@ nemoclaw <sandbox-name> upload
 
 An entry will document tool usage, actions, and rules:
 
-![TOOLS.md — Graph Query tool documentation](./img-09.png)
+![TOOLS.md - Graph Query tool documentation](./img-09.png)
 
 **7) Define a lookup strategy in either TOOLS.md or AGENT.md**
 
@@ -291,7 +291,7 @@ An entry will document tool usage, actions, and rules:
 
 In a web browser, access the Openclaw configuration page at `http://localhost:<web-app-port>/<endpoint-selected-in-proxy>`.
 
-![OpenClaw Control — Gateway Dashboard](./img-11.png)
+![OpenClaw Control - Gateway Dashboard](./img-11.png)
 
 **10) Generate an SSL access token**
 

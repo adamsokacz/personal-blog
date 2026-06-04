@@ -14,16 +14,16 @@ featured: true
 
 | Platform | Role |
 |---|---|
-| **Omniverse** | The virtual simulation platform. GPU-native for incredible performance, and **open** — organizations can build their own extensions to extend its functionality. |
+| **Omniverse** | The virtual simulation platform. GPU-native for incredible performance, and **open** - organizations can build their own extensions to extend its functionality. |
 | **Isaac Sim** | A custom Omniverse Kit application that bundles common Omniverse extensions for **robotics simulation**. |
-| **Metropolis** | A video-analysis platform that uses AI to understand what is happening through camera and sensor feeds — either inside an Omniverse simulation or in real life. |
+| **Metropolis** | A video-analysis platform that uses AI to understand what is happening through camera and sensor feeds - either inside an Omniverse simulation or in real life. |
 | **Cosmos** | An AI platform that lets AI engineers build custom platforms. A key use case is generating **synthetic, photo-realistic visual scenarios** for Metropolis to test against. |
 | **NIM** | NVIDIA's **containerized AI model** platform. |
 
 
 ## What is Omniverse
 
-Omniverse is a simulation platform — essentially a specialized video-game engine — designed to:
+Omniverse is a simulation platform - essentially a specialized video-game engine - designed to:
 
 - Work with NVIDIA's ecosystem of platforms
 - Be **extensible**, so companies can easily build on top of it
@@ -37,7 +37,7 @@ Extensions interact with items in the Omniverse scene using **Scripting APIs**, 
 
 ## Scripting APIs
 
-### Example 1 — Iterate over all prims and select every Camera
+### Example 1 - Iterate over all prims and select every Camera
 
 ```python
 import omni.usd
@@ -61,7 +61,7 @@ selection = ctx.get_selection()
 selection.set_selected_prim_paths(camera_paths, True)
 ```
 
-### Example 2 — Get all vertices of a mesh prim
+### Example 2 - Get all vertices of a mesh prim
 
 ```python
 import omni.usd
@@ -155,7 +155,7 @@ class CompanyToolExtension(omni.ext.IExt):
 **Shared variables**
 
 - Sometimes it's useful to make variables accessible to all `ui.Window`s and `ui.Frame`s within the extension.
-- For simple extensions, implement these in a class — as simple or abstract data models — and provide them to the subclasses that need them.
+- For simple extensions, implement these in a class - as simple or abstract data models - and provide them to the subclasses that need them.
 
 **Connector pattern**
 
@@ -268,7 +268,7 @@ for child in parent.GetChildren():
 
 ### Reading & writing prim attributes
 
-Attributes hold a prim's data — visibility, transforms, shader inputs, or your own custom values. Use `GetAttribute()`/`Get()` to read and `Set()` to author; `CreateAttribute()` adds new ones.
+Attributes hold a prim's data - visibility, transforms, shader inputs, or your own custom values. Use `GetAttribute()`/`Get()` to read and `Set()` to author; `CreateAttribute()` adds new ones.
 
 ```python
 import omni.usd
@@ -357,9 +357,9 @@ with self._window.frame:
 # In on_shutdown:  self._window.destroy(); self._window = None
 ```
 
-### Value models — `SimpleIntModel` & friends
+### Value models - `SimpleIntModel` & friends
 
-`omni.ui` follows a **model-view pattern**: every widget reads and writes its data through a model rather than holding the value itself. The simple models each wrap one primitive — `SimpleIntModel`, `SimpleFloatModel`, `SimpleBoolModel`, and `SimpleStringModel`. Bind the same model to multiple widgets and they stay in sync automatically.
+`omni.ui` follows a **model-view pattern**: every widget reads and writes its data through a model rather than holding the value itself. The simple models each wrap one primitive - `SimpleIntModel`, `SimpleFloatModel`, `SimpleBoolModel`, and `SimpleStringModel`. Bind the same model to multiple widgets and they stay in sync automatically.
 
 ```python
 import omni.ui as ui
@@ -380,9 +380,9 @@ ui.IntSlider(model=int_model)
 ui.IntField(model=int_model)
 ```
 
-### Abstract models — custom value & item models
+### Abstract models - custom value & item models
 
-When the built-in models aren't enough, subclass the abstract base classes. `AbstractValueModel` backs a single-value widget with your own storage or computed logic — implement the `get_value_as_*` and `set_value` methods and call `_value_changed()` to refresh the view.
+When the built-in models aren't enough, subclass the abstract base classes. `AbstractValueModel` backs a single-value widget with your own storage or computed logic - implement the `get_value_as_*` and `set_value` methods and call `_value_changed()` to refresh the view.
 
 ```python
 import omni.ui as ui
