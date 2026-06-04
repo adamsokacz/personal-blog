@@ -14,7 +14,7 @@ description: "Personal career goals, market context, and strategic paths."
 ## Where I Am
 
 - Technical specialist in industrial automation robotics software
-- Interest and some experience in Industrial (Physical) AI in the NVIDIA Omniverse ecosystem
+- Interest in Industrial (Physical) AI in the NVIDIA Omniverse ecosystem
 - Began my MBA because I struggled with leadership (soft) skills in previous roles
 - Because of my MBA, I have a foundational understanding of how organizations function, make decisions, and manage risk
 
