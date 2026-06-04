@@ -24,8 +24,9 @@ description: "Personal career goals, market context, and strategic paths."
 1. Interesting technical work
 2. Friendly work culture
 
+## Career Strategy
 
-## Strategy 1
+### Scenario 1
 
 
 **Years 1–7**
@@ -39,7 +40,7 @@ description: "Personal career goals, market context, and strategic paths."
 - **Option 2:** Begin a focused push into management within a high-value sector of the Canadian economy
 
 
-## Strategy 2
+### Scenario 2
 - Operate a business that enables me to combine many of my skills in a unique way
 
 
