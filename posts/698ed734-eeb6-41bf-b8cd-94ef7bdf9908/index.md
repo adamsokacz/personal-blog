@@ -1,5 +1,5 @@
 ---
-title: "Cosmos 3 Quick Start"
+title: "Cosmos 3 Quickstart"
 excerpt: "Getting started with NVIDIA's Cosmos 3 Physical AI models for image generation, video synthesis, video transfer, and frame prediction."
 publishDate: "2026-06-08"
 tags:
@@ -13,6 +13,8 @@ download:
   src: "/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/cosmos-quickstart.zip"
   label: "Download Project Files"
 ---
+
+# Overview
 
 Cosmos is a family of vision large language models (vLLM's) developed by NVIDIA for their Physical AI ecosystem. The models, themselves, are designed to integrate with other NVIDIA products, such as:
 
@@ -36,7 +38,7 @@ There are 2 goals of Cosmos:
 
 <br />
 
-# Features of Cosmos
+# Features
 
 There are 3 features of Cosmos:
 <br />
