@@ -19,6 +19,12 @@ const blog = defineCollection({
     draft: z.boolean().optional(),
     tags: z.array(z.string()).optional(),
     pdf: z.string().optional(),
+    download: z
+      .object({
+        src: z.string(),
+        label: z.string().default("Download Project Files"),
+      })
+      .optional(),
     type: z.enum(["markdown", "pdf"]).default("markdown"),
   }),
 });
