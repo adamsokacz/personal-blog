@@ -36,6 +36,13 @@
   .prose a {
     @apply text-primary underline decoration-1 underline-offset-2 hover:no-underline;
   }
+
+  .prose pre {
+    @apply rounded-lg border border-slate-200 bg-slate-50 px-5 py-4 text-sm leading-relaxed;
+  }
+  .prose :not(pre) > code {
+    @apply rounded bg-slate-100 px-1.5 py-0.5 text-sm font-medium text-slate-800;
+  }
   .prose blockquote {
     @apply relative border-none pl-0 text-center text-[1.375em] leading-snug font-semibold not-italic sm:text-[1.66667em] lg:-mx-24 xl:-mx-40;
   }
