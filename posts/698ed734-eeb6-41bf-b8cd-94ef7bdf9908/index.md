@@ -363,7 +363,7 @@ print("Saved output/3.mp4")
 
 Output:
 
-<video src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/robot-3.mp4" controls width="640"></video>
+<video controls width="640"><source src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/robot-3.mp4" type="video/mp4" /></video>
 
 ### Demo 4: Video Reasoning
 
@@ -459,7 +459,7 @@ print("Saved output/5.mp4")
 
 Output:
 
-<video src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/robot-5.mp4" controls width="640"></video>
+<video controls width="640"><source src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/robot-5.mp4" type="video/mp4" /></video>
 
 ### Demo 6: Video Predict
 
@@ -495,7 +495,7 @@ print("Saved output/6.mp4")
 
 Output:
 
-<video src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/robot-6.mp4" controls width="640"></video>
+<video controls width="640"><source src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/robot-6.mp4" type="video/mp4" /></video>
 
 ## Actuator Example
 
@@ -585,7 +585,7 @@ result = pipe(prompt, image=image, num_frames=80, height=480, width=848, fps=24.
 
 Output:
 
-<video src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/actuator-3.mp4" controls width="640"></video>
+<video controls width="640"><source src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/actuator-3.mp4" type="video/mp4" /></video>
 
 ### Demo 4: Video Reasoning
 
@@ -623,7 +623,7 @@ result = pipe(prompt, image=image, num_frames=140, height=480, width=848, fps=24
 
 Output:
 
-<video src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/actuator-5.mp4" controls width="640"></video>
+<video controls width="640"><source src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/actuator-5.mp4" type="video/mp4" /></video>
 
 ### Demo 6: Video Predict
 
@@ -653,4 +653,4 @@ result = pipe(prompt, image=image, num_frames=49, height=480, width=848, fps=24.
 
 Output:
 
-<video src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/actuator-6.mp4" controls width="640"></video>
+<video controls width="640"><source src="/posts/698ed734-eeb6-41bf-b8cd-94ef7bdf9908/actuator-6.mp4" type="video/mp4" /></video>
