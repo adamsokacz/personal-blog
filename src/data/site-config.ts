@@ -7,7 +7,6 @@ const siteConfig: SiteConfig = {
   primaryNavLinks: [
     { text: "Home", href: "/" },
     { text: "Projects", href: "/projects" },
-    { text: "Career Plan", href: "/career-plan" },
   ],
   socialLinks: [
     {
